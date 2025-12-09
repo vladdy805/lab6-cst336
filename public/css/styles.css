@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+body > h1,
+body > form,
+body > div,
+body > p {
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+h1 {
+  margin: 10px auto 20px;
+  padding-bottom: 20px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px auto;
+  max-width: 600px;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
+
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  margin: 5px 0 12px;
+  padding: 6px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  display: block;
+}
+
+input[type="radio"] {
+  margin: 0 5px 0 0;
+}
+
+button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+a {
+  color: #1b5408;
+  font-style: oblique;
+  font-size: x-small;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+#authorList {
+    text-align: justify;
+    padding-left: 440px;
+}
+
+#authorName {
+    color: #204990;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: 300;
+}
+
+footer {
+    padding-top: 20px;
+}

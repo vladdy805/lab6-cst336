@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') %>
+<body>
+    <h1>Add a new Quote</h1>
+
+
+    <form method="POST" action="/quote/new">
+        Quote:<br>
+        <input type="text" name="quote"><br><br>
+        
+        Author:
+        <select name="authorId">
+            <% authors.forEach(author=> { %>
+                <option value="<%= author.authorId %>">
+                    <%= author.firstName %>
+                        <%= author.lastName %>
+                </option>
+                <% }) %>
+        </select><br><br>
+
+        Category:
+        <select name="category">
+            <% categories.forEach(category=> { %>
+                <option value="<%= category.category %>">
+                    <%= category.category %>
+                </option>
+            <% }) %>
+        </select><br><br>
+
+        <button>Add Quote</button>
+    </form>
+
+    <% if (typeof message !="undefined" ){ %>
+        <h3>
+            <%=message%>
+        </h3>
+        <% } %>
+
+</body>
+ <%- include('partials/footer.ejs') %>

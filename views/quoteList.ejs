@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+<body>
+
+
+    <h1> Update/Delete Quotes </h1>
+
+
+    <% for (i=0; i < quotes.length; i++) { %>
+       <em> <%=quotes[i].quote%></em><br>
+            - <span id="authorName"><%=quotes[i].firstName%>
+                <%=quotes[i].lastName%></span> <br>
+
+                    <a href="/quote/edit?quoteId=<%=quotes[i].quoteId%>">UPDATE</a> |
+
+
+                    <a href="/quote/delete?quoteId=<%=quotes[i].quoteId%>">DELETE</a><br><br>
+
+                    <% } %>
+</body>
+ <%- include('partials/footer.ejs') %>
