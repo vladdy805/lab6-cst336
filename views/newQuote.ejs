@@ -1,39 +1,42 @@
 <%- include('partials/header.ejs') %>
-<body>
-    <h1>Add a new Quote</h1>
 
+    <body>
+        <h1>Add a new Quote</h1>
+        <p>
+            <a href="/">← Back to Home</a>
+        </p>
 
-    <form method="POST" action="/quote/new">
-        Quote:<br>
-        <input type="text" name="quote"><br><br>
-        
-        Author:
-        <select name="authorId">
-            <% authors.forEach(author=> { %>
-                <option value="<%= author.authorId %>">
-                    <%= author.firstName %>
-                        <%= author.lastName %>
-                </option>
-                <% }) %>
-        </select><br><br>
+        <form method="POST" action="/quote/new">
+            Quote:<br>
+            <input type="text" name="quote"><br><br>
 
-        Category:
-        <select name="category">
-            <% categories.forEach(category=> { %>
-                <option value="<%= category.category %>">
-                    <%= category.category %>
-                </option>
-            <% }) %>
-        </select><br><br>
+            Author:
+            <select name="authorId">
+                <% authors.forEach(author=> { %>
+                    <option value="<%= author.authorId %>">
+                        <%= author.firstName %>
+                            <%= author.lastName %>
+                    </option>
+                    <% }) %>
+            </select><br><br>
 
-        <button>Add Quote</button>
-    </form>
+            Category:
+            <select name="category">
+                <% categories.forEach(category=> { %>
+                    <option value="<%= category.category %>">
+                        <%= category.category %>
+                    </option>
+                    <% }) %>
+            </select><br><br>
 
-    <% if (typeof message !="undefined" ){ %>
-        <h3>
-            <%=message%>
-        </h3>
-        <% } %>
+            <button>Add Quote</button>
+        </form>
 
-</body>
- <%- include('partials/footer.ejs') %>
+        <% if (typeof message !="undefined" ){ %>
+            <h3>
+                <%=message%>
+            </h3>
+            <% } %>
+
+    </body>
+    <%- include('partials/footer.ejs') %>

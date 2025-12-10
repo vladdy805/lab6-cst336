@@ -1,20 +1,27 @@
 <%- include('partials/header.ejs') %>
-<body>
+
+    <body>
 
 
-    <h1> Update/Delete Quotes </h1>
+        <h1> Update/Delete Quotes </h1>
+        <p>
+            <a href="/">← Back to Home</a>
+        </p>
+
+        <% for (i=0; i < quotes.length; i++) { %>
+            <em>
+                <%=quotes[i].quote%>
+            </em><br>
+            - <span id="authorName">
+                <%=quotes[i].firstName%>
+                    <%=quotes[i].lastName%>
+            </span> <br>
+
+            <a href="/quote/edit?quoteId=<%=quotes[i].quoteId%>">UPDATE</a> |
 
 
-    <% for (i=0; i < quotes.length; i++) { %>
-       <em> <%=quotes[i].quote%></em><br>
-            - <span id="authorName"><%=quotes[i].firstName%>
-                <%=quotes[i].lastName%></span> <br>
+            <a href="/quote/delete?quoteId=<%=quotes[i].quoteId%>">DELETE</a><br><br>
 
-                    <a href="/quote/edit?quoteId=<%=quotes[i].quoteId%>">UPDATE</a> |
-
-
-                    <a href="/quote/delete?quoteId=<%=quotes[i].quoteId%>">DELETE</a><br><br>
-
-                    <% } %>
-</body>
- <%- include('partials/footer.ejs') %>
+            <% } %>
+    </body>
+    <%- include('partials/footer.ejs') %>
